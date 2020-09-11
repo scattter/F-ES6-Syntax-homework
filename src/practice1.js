@@ -1,8 +1,8 @@
-const parseData = (input) => {
+const parseData = ({ data, column }) => {
     let output = [];
-    input.data.map(it => {
+    data.map(it => {
         let item = {};
-        input.column.map(key => {
+        column.map(key => {
             item[key.name] = it.shift()
         })
         output.push(item)
